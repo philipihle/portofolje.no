@@ -1,0 +1,327 @@
+/* ================================
+   Modern Porteføljestil (Dark UI)
+   ================================ */
+
+   :root {
+    --dark-bg: #0f111a;
+    --card-bg: #1a1d2b;
+    --primary: #fdbb30;
+    --text-light: #c7c7c7;
+    --white: #ffffff;
+    --transition: 0.3s ease-in-out;
+    --radius: 12px;
+  }
+  
+  /* RESET */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  html, body { height: 100%; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  
+  /* ========================
+     HEADER OG NAVIGASJON
+     ======================== */
+  header {
+    background: #0a0d1a;
+    color: var(--white);
+    padding: 1.25rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav h1 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  nav ul { list-style: none; display: flex; gap: 2rem; }
+  nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+  }
+  nav a:hover { color: var(--primary); }
+  
+  /* ========================
+     KNAPPER (globale)
+     ======================== */
+  .btn {
+    display: inline-block;
+    padding: 0.25rem 0.25rem;
+    background: var(--primary);
+    color: #111;
+    border: 0;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;         /* viktig for <a class="btn"> */
+    cursor: pointer;
+    transition: transform .15s ease, background .2s ease, box-shadow .2s;
+    box-shadow: 0 6px 14px rgba(0,0,0,.2);
+    margin-top: 0.7rem;
+  }
+  .btn:hover { background: #e6a816; transform: translateY(-1px); }
+  .btn:active { transform: translateY(0); box-shadow: 0 4px 10px rgba(0,0,0,.25); }
+  
+  /* Flat “ghost”-knapp til kortene */
+  .btn-ghost {
+    display: inline-block;
+    padding: .55rem 1rem;
+    border: 1px solid rgba(255,255,255,.18);
+    color: #dfe6f0;
+    background: transparent;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background .2s ease, border-color .2s ease, color .2s ease;
+  }
+  .btn-ghost:hover {
+    background: rgba(255,255,255,.06);
+    border-color: rgba(255,255,255,.35);
+    color: #fff;
+  }
+  
+  /* ========================
+     HERO-SEKSJON
+     ======================== */
+  .hero {
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    background-color: var(--card-bg);
+    background-image: url('binary-bg.png');  /* legg inn din fil */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: soft-light;
+    position: relative;
+  }
+  .hero h2 {
+    font-size: clamp(2.2rem, 3.8vw, 3rem);
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+  .undertekst-font { font-style: italic; color: #b9c0cc; margin-top: .75rem; }
+  
+  .profilbilde {
+    display: block;
+    margin: 2rem auto 1.25rem;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 18%;  /* flytt fokus litt opp – juster ved behov */
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  }
+  
+  /* ========================
+     SEKSJONER GENERELT
+     ======================== */
+  .projects, .about, .contact {
+    padding: 3.5rem 0 4rem;
+  }
+  section > h2 {
+    max-width: 1100px;
+    margin: 0 auto 1.25rem;
+    padding: 0 2rem;
+    color: var(--white);
+    font-size: 2rem;
+  }
+  
+  /* ========================
+     PROSJEKTER – referansestil
+     ======================== */
+  .section-header {
+    max-width: 1100px;
+    margin: 0 auto 1.25rem;
+    padding: 0 2rem;
+  }
+  .section-header .eyebrow{
+    display:inline-block;
+    font-size:.8rem; letter-spacing:.12em; text-transform:uppercase;
+    color: var(--text-light); opacity:.7; margin-bottom:.25rem;
+  }
+  .section-header h2 { color:#fff; font-size:2.25rem; }
+  
+  .project-grid {
+    max-width: 1100px;
+    margin: 1.5rem auto 0;
+    padding: 0 2rem;
+    display: grid;
+    gap: 1.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  }
+  
+  .project-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.06);
+    box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    display: flex;
+    flex-direction: column;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 36px rgba(0,0,0,.35);
+    border-color: rgba(255,255,255,.12);
+  }
+  
+  .thumb-wrap {
+    position: relative;
+    aspect-ratio: 16/9;             /* konsistent høyde, uansett bilde */
+    background: #101320;
+  }
+  .project-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .badge {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    background: var(--primary);
+    color: #111;
+    font-weight: 700;
+    font-size: .75rem;
+    padding: .35rem .6rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.25);
+  }
+  
+  .card-body { padding: 1rem 1.25rem .5rem; }
+  .card-title { color: #fff; font-size: 1.15rem; margin: 0 0 .35rem; }
+  .card-desc  { color: var(--text-light); opacity: .9; font-size: .95rem; }
+  .card-footer { padding: 0 1.25rem 1.25rem; margin-top: .25rem; }
+  
+  /* ========================
+     MODALER
+     ======================== */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0,0,0,.6);
+  }
+  .modal-open { overflow: hidden; height: 100vh; }  /* lås bakgrunn når åpen */
+  
+  .modal-content {
+    background-color: var(--card-bg);
+    color: var(--white);
+    padding: 2rem;
+    margin: 5% auto;
+    border-radius: 8px;
+    max-width: 900px;
+    max-height: 90vh;          /* viktig: ikke spreng viewport */
+    overflow-y: auto;          /* scroll innholdet i modalen */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255,255,255,.08);
+  }
+  .close {
+    position: sticky;          /* holder X synlig når man scroller i modalen */
+    top: 0;
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--white);
+    margin-left: auto;
+  }
+  
+  /* Bilder inne i modal */
+  .oslometside,
+  .modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-top: 1rem;
+  }
+  
+  /* ========================
+     FOOTER
+     ======================== */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background: #0a0d1a;
+    color: var(--text-light);
+  }
+  
+  /* ========================
+     RESPONSIVE
+     ======================== */
+  @media (max-width: 768px) {
+    nav ul { gap: 1rem; }
+    .hero { padding: 4.5rem 1.25rem 3rem; }
+    .profilbilde { width: 12rem; height: 12rem; }
+    .section-header, section > h2 { padding: 0 1.25rem; }
+    .project-grid { padding: 0 1.25rem; }
+  }
+  
+  /* ========================
+     (Valgfritt) Spinn-effekt
+     ======================== */
+  .profilbilde.spin {
+    animation: spin-slowdown 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards,
+               light-sweep 1.5s ease-out forwards;
+  }
+  @keyframes spin-slowdown {
+    from { transform: rotateY(0deg); }
+    to   { transform: rotateY(1440deg); } /* 4 runder */
+  }
+  @keyframes light-sweep {
+    0%   { box-shadow: -10px 0px 30px rgba(0, 0, 0, 0.2); }
+    25%  { box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); }
+    50%  { box-shadow: 10px 0px 30px rgba(0, 0, 0, 0.25); }
+    75%  { box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.2); }
+    100% { box-shadow: -10px 0px 30px rgba(0, 0, 0, 0.15); }
+  }
+  .dark-section {
+    background-color: var(--card-bg); /* samme som header */
+    color: var(--text-light);
+    padding: 4rem 2rem;
+  }
+  
+  .section-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .dark-section h2 {
+    color: var(--white);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .dark-section p {
+    margin-bottom: 0.75rem;
+  }
+  
+  .dark-section a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  
+  .dark-section a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Litt luft før footeren */
+  footer {
+    background-color: #0a0d1a;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  

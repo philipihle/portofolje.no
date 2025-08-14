@@ -1,0 +1,210 @@
+<!-- Jasså du liker å snoke i koden du! -->
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Philip Ihle | Portefølje</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===================== -->
+  <!-- Navigasjon / Header   -->
+  <!-- ===================== -->
+  <header>
+    <nav>
+      <h1>Philip Ihle</h1>
+      <ul>
+        <li><a href="prosjekter.html">Prosjekter</a></li>
+        <li><a href="om.html">Om meg</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============ -->
+  <!-- Hero-seksjon -->
+  <!-- ============ -->
+  <section class="hero">
+    <h2>Hei, jeg er Philip!</h2>
+    <img src="bildeavmegselv.jpg" alt="Profilbilde" class="profilbilde" />
+    <p class="undertekst-font">
+      Student i datateknologi med lidenskap for teknologi og datadrevet innsikt.
+    </p>
+    <a href="prosjekter.html" class="btn">Se prosjektene mine</a>
+  </section>
+
+  <!-- ================= -->
+  <!-- Prosjekter-seksjon -->
+  <!-- ================= -->
+  <section id="prosjekter" class="projects">
+    <div class="section-header">
+      <span class="eyebrow">Mitt arbeid</span>
+      <h2>Projects</h2>
+    </div>
+
+    <div class="project-grid">
+
+      <!-- Kort 1 -->
+      <article class="project-card">
+        <div class="thumb-wrap">
+          <img src="oslometside.png" alt="Skoleprosjekt" class="project-thumb" />
+          <span class="badge">Skoleprosjekt</span>
+        </div>
+
+        <div class="card-body">
+          <h3 class="card-title">Rekonstruksjon av OsloMet sin emneside</h3>
+          <p class="card-desc">Koding i HTML, CSS og JavaScript fra scratch.</p>
+        </div>
+
+        <div class="card-footer">
+          <button class="btn btn-ghost" onclick="openModal('modal1')">Les mer</button>
+        </div>
+
+        <!-- Modal til Kort 1 -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h3>Skoleprosjekt – Rekonstruksjon av OsloMet's nettsider</h3>
+            <p>
+              Første semester i studiet rekonstruerte jeg og min eksamensgruppe, OsloMet sin nettside for
+              emnet matematisk modellering. Dette ga oss nyttig kunnskap og erfaring innenfor HTML, CSS og
+              JavaScript. Vi vektet også universell utforming stort, og brukte sematisk HTML og CSS for best
+              mulig utforming.
+            </p>
+            <br />
+            <p>
+              Se koden på
+              <a
+                href="https://github.com/philipihle/OsloMet-Rekonstruksjon"
+                class="btn btn-github"
+                target="_blank"
+                rel="noopener noreferrer"
+              >GitHub</a>
+            </p>
+            <img src="oslometside.png" alt="OsloMet's nettside rekonstruert" class="oslometside" />
+          </div>
+        </div>
+        <!-- /Modal 1 -->
+      </article>
+
+      <!-- Kort 2 -->
+      <article class="project-card">
+        <div class="thumb-wrap">
+          <img src="asko-thumb2.png" alt="ASKO – NGFLYT" class="project-thumb" />
+          <span class="badge">Jobb · ASKO</span>
+        </div>
+
+        <div class="card-body">
+          <h3 class="card-title">RPA Robot</h3>
+          <p class="card-desc">
+            Effektiviserte manuelle prossesser gjennom automatisjon ved hjelp av
+            RPA basert på JavaScript og UI automatisering.
+          </p>
+        </div>
+
+        <div class="card-footer">
+          <button class="btn btn-ghost" onclick="openModal('modal2')">Les mer</button>
+        </div>
+
+        <!-- Modal til Kort 2 -->
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h3>ASKO – Vareflytanalyse</h3>
+            <p>
+              Jeg utviklet SQL-spørringer og analyser for å måle effektivitet i plukkprosesser og lagerflyt.
+              Dette ga innsikt i flaskehalser og forbedringsområder for bedre vareleveranse.
+            </p>
+            <img src="asko-thumb2.png" alt="ASKO – NGFLYT" class="asko-thumb" />
+          </div>
+        </div>
+        <!-- /Modal 2 -->
+      </article>
+
+      <!-- Kort 3 -->
+      <article class="project-card">
+        <div class="thumb-wrap">
+          <img src="kiwiplussrek2.jpeg" alt="KIWI Reklame" class="project-thumb" />
+          <span class="badge">Prosjekt · KIWI</span>
+        </div>
+
+        <div class="card-body">
+          <h3 class="card-title">Markedsmateriell</h3>
+          <p class="card-desc">
+            Markedsmateriell for KIWI Pluss og Trumf, utarbeidet i Photoshop.
+          </p>
+        </div>
+
+        <div class="card-footer">
+          <button class="btn btn-ghost" onclick="openModal('modal3')">Les mer</button>
+        </div>
+
+        <!-- Modal til Kort 3 -->
+        <div id="modal3" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h3>ASKO – Vareflytanalyse</h3>
+            <p>
+              Jeg utviklet SQL-spørringer og analyser for å måle effektivitet i plukkprosesser og lagerflyt.
+              Dette ga innsikt i flaskehalser og forbedringsområder for bedre vareleveranse.
+            </p>
+          </div>
+        </div>
+        <!-- /Modal 3 -->
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ========= -->
+  <!-- Om meg    -->
+  <!-- ========= -->
+  <section id="om" class="about dark-section">
+    <div class="section-container">
+      <h2>Om meg</h2>
+      <p>
+        Studerer for øyeblikket anvendt datateknologi ved OsloMet, og har stor interesse for moderne
+        teknologi og utvikling. Ved siden av studiene jobber jeg som driftskoordinator for NGFLYT hos
+        ASKO Norge – NorgesGruppens automatiske varebestillingssystem for alle deres dagligvarebutikker.
+        I denne rollen håndterer jeg driftsrelaterte oppgaver for å sikre et godt samspill mellom lager,
+        dagligvarebutikkene og profilhusene i NorgesGruppen. Målet er å unngå tomme hyller og unødvendig
+        svinn, og dermed sikre presise og effektive leveranser som gir forbrukerne en god handleopplevelse.
+      </p>
+      <p>
+        Jeg brenner for å utforske nye teknologier og konsepter, og kombinerer gjerne teknisk innsikt med praktisk problemløsning. På fritiden er jeg spesielt nysgjerrig på kunstig intelligens, automatisering og nye verktøy. Jeg bruker min kunnskap til å utvikle smarte og effektive løsninger som forenkler komplekse og tidkrevende oppgaver – for meg finnes det ingen oppgave som er for stor, det handler bare om tid.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ -->
+  <!-- Kontakt meg  -->
+  <!-- ============ -->
+  <section id="kontakt" class="contact dark-section">
+    <div class="section-container">
+      <h2>Kontakt meg</h2>
+      <p>📧 <a href="mailto:philip.ihle@asko.no">philip.ihle@asko.no</a></p>
+      <p>📍 Oslo, Norge</p>
+      <p>
+        🔗 <a href="https://no.linkedin.com/in/philip-ihle-1716b8231" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ====== -->
+  <!-- Footer -->
+  <!-- ====== -->
+  <footer>
+    <p>&copy; 2025 Philip Ihle</p>
+  </footer>
+
+  <!-- ========= -->
+  <!-- Scripts   -->
+  <!-- ========= -->
+  <script src="script.js"></script>
+
+</body>
+</html>
