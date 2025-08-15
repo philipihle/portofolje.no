@@ -19,27 +19,128 @@
     </nav>
   </header>
 
-  <main class="content">
-    <h2>Mine Prosjekter</h2>
-
-    <div class="project-card">
-      <h3>📊 Skoleprosjekt – Analyse av kundedata</h3>
-      <p>Analyse av kundemønstre basert på transaksjonsdata. Brukte Python, Pandas og Scikit-learn for prediktiv modellering og visualisering av adferd.</p>
-      <a href="#" class="btn">Les mer</a>
+<main class="content">
+  <!-- ================= -->
+  <!-- Prosjekter-seksjon -->
+  <!-- ================= -->
+  <section id="prosjekter" class="projects">
+    <div class="section-header">
+      <span class="eyebrow">Mitt arbeid</span>
+      <h2>Prosjekter</h2>
     </div>
 
-    <div class="project-card">
-      <h3>📦 ASKO – Vareflytanalyse</h3>
-      <p>Utvikling av SQL-spørringer og dashboards for å forbedre plukkruter og identifisere flaskehalser i logistikken. Brukt i beslutningsgrunnlag hos lagerledelse.</p>
-      <a href="#" class="btn">Les mer</a>
-    </div>
+    <div class="project-grid">
 
-    <div class="project-card">
-      <h3>📐 BI-dashboard – Visualisering av nøkkeltall</h3>
-      <p>Bygget interaktivt dashboard med Power BI for å overvåke ordrestatus og KPI-er. Integrerte datakilder fra ASKO-systemene og presenterte dem for ledelsen.</p>
-      <a href="#" class="btn">Les mer</a>
-    </div>
+      <!-- Kort 1 -->
+      <article class="project-card">
+        <div class="thumb-wrap">
+          <img src="oslometside.png" alt="Skoleprosjekt" class="project-thumb" />
+          <span class="badge">Skoleprosjekt</span>
+        </div>
 
+        <div class="card-body">
+          <h3 class="card-title">Rekonstruksjon av OsloMet sin emneside</h3>
+          <p class="card-desc">Koding i HTML, CSS og JavaScript fra scratch.</p>
+        </div>
+
+        <div class="card-footer">
+          <button class="btn btn-ghost" onclick="openModal('modal1')">Les mer</button>
+        </div>
+
+        <!-- Modal til Kort 1 -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h3>Skoleprosjekt – Rekonstruksjon av OsloMet's nettsider</h3>
+            <p>
+              Første semester i studiet rekonstruerte jeg og min eksamensgruppe, OsloMet sin nettside for
+              emnet matematisk modellering. Dette ga oss nyttig kunnskap og erfaring innenfor HTML, CSS og
+              JavaScript. Vi vektet også universell utforming stort, og brukte sematisk HTML og CSS for best
+              mulig utforming.
+            </p>
+            <br />
+            <p>
+              Se koden på
+              <a
+                href="https://github.com/philipihle/OsloMet-Rekonstruksjon"
+                class="btn btn-github"
+                target="_blank"
+                rel="noopener noreferrer"
+              >GitHub</a>
+            </p>
+            <img src="oslometside.png" alt="OsloMet's nettside rekonstruert" class="oslometside" />
+          </div>
+        </div>
+        <!-- /Modal 1 -->
+      </article>
+
+      <!-- Kort 2 -->
+      <article class="project-card">
+        <div class="thumb-wrap">
+          <img src="asko-thumb2.png" alt="ASKO – NGFLYT" class="project-thumb" />
+          <span class="badge">Jobb · ASKO</span>
+        </div>
+
+        <div class="card-body">
+          <h3 class="card-title">RPA Robot</h3>
+          <p class="card-desc">
+            Effektiviserte manuelle prossesser gjennom automatisjon ved hjelp av
+            RPA basert på JavaScript og UI automatisering.
+          </p>
+        </div>
+
+        <div class="card-footer">
+          <button class="btn btn-ghost" onclick="openModal('modal2')">Les mer</button>
+        </div>
+
+        <!-- Modal til Kort 2 -->
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h3>ASKO – RPA Robot</h3>
+            <p>
+              Effektiviserte manuelle prossesser gjennom automatisjon ved hjelp av
+            RPA basert på JavaScript og UI automatisering.
+            </p>
+            <img src="asko-thumb2.png" alt="ASKO – NGFLYT" class="asko-thumb" />
+          </div>
+        </div>
+        <!-- /Modal 2 -->
+      </article>
+
+      <!-- Kort 3 -->
+      <article class="project-card">
+        <div class="thumb-wrap">
+          <img src="kiwiplussrek2.jpeg" alt="KIWI Reklame" class="project-thumb" />
+          <span class="badge">Prosjekt · KIWI</span>
+        </div>
+
+        <div class="card-body">
+          <h3 class="card-title">Markedsmateriell</h3>
+          <p class="card-desc">
+            Markedsmateriell for KIWI Pluss og Trumf, utarbeidet i Photoshop.
+          </p>
+        </div>
+
+        <div class="card-footer">
+          <button class="btn btn-ghost" onclick="openModal('modal3')">Les mer</button>
+        </div>
+
+        <!-- Modal til Kort 3 -->
+        <div id="modal3" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h3>KIWI · Markedsmateriell</h3>
+            <p>
+              Jeg lagde markedsmateriell til lokal markedsføring i butikk av KIWI Pluss og Trumf. Materiellet ble hengt opp på KIWI Fjellbo for å verve flere kunder til fordelsprogrammene, og materiellet ble laget ved hjelp av Photoshop
+            </p>
+          </div>
+        </div>
+        <!-- /Modal 3 -->
+      </article>
+
+    </div>
+  </section>
   </main>
 
   <footer>
