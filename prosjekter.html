@@ -8,6 +8,7 @@
 </head>
 <body>
 
+  <!-- Header / Navigasjon -->
   <header>
     <nav>
       <h1><a href="index.html">Philip Ihle</a></h1>
@@ -19,10 +20,7 @@
     </nav>
   </header>
 
-<main class="content">
-  <!-- ================= -->
-  <!-- Prosjekter-seksjon -->
-  <!-- ================= -->
+  <!-- Prosjekter -->
   <section id="prosjekter" class="projects">
     <div class="section-header">
       <span class="eyebrow">Mitt arbeid</span>
@@ -46,32 +44,6 @@
         <div class="card-footer">
           <button class="btn btn-ghost" onclick="openModal('modal1')">Les mer</button>
         </div>
-
-        <!-- Modal til Kort 1 -->
-        <div id="modal1" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal('modal1')">&times;</span>
-            <h3>Skoleprosjekt – Rekonstruksjon av OsloMet's nettsider</h3>
-            <p>
-              Første semester i studiet rekonstruerte jeg og min eksamensgruppe, OsloMet sin nettside for
-              emnet matematisk modellering. Dette ga oss nyttig kunnskap og erfaring innenfor HTML, CSS og
-              JavaScript. Vi vektet også universell utforming stort, og brukte sematisk HTML og CSS for best
-              mulig utforming.
-            </p>
-            <br />
-            <p>
-              Se koden på
-              <a
-                href="https://github.com/philipihle/OsloMet-Rekonstruksjon"
-                class="btn btn-github"
-                target="_blank"
-                rel="noopener noreferrer"
-              >GitHub</a>
-            </p>
-            <img src="oslometside.png" alt="OsloMet's nettside rekonstruert" class="oslometside" />
-          </div>
-        </div>
-        <!-- /Modal 1 -->
       </article>
 
       <!-- Kort 2 -->
@@ -92,20 +64,6 @@
         <div class="card-footer">
           <button class="btn btn-ghost" onclick="openModal('modal2')">Les mer</button>
         </div>
-
-        <!-- Modal til Kort 2 -->
-        <div id="modal2" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal('modal2')">&times;</span>
-            <h3>ASKO – RPA Robot</h3>
-            <p>
-              Effektiviserte manuelle prossesser gjennom automatisjon ved hjelp av
-            RPA basert på JavaScript og UI automatisering.
-            </p>
-            <img src="asko-thumb2.png" alt="ASKO – NGFLYT" class="asko-thumb" />
-          </div>
-        </div>
-        <!-- /Modal 2 -->
       </article>
 
       <!-- Kort 3 -->
@@ -125,28 +83,68 @@
         <div class="card-footer">
           <button class="btn btn-ghost" onclick="openModal('modal3')">Les mer</button>
         </div>
-
-        <!-- Modal til Kort 3 -->
-        <div id="modal3" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal('modal3')">&times;</span>
-            <h3>KIWI · Markedsmateriell</h3>
-            <p>
-              Jeg lagde markedsmateriell til lokal markedsføring i butikk av KIWI Pluss og Trumf. Materiellet ble hengt opp på KIWI Fjellbo for å verve flere kunder til fordelsprogrammene, og materiellet ble laget ved hjelp av Photoshop
-            </p>
-          </div>
-        </div>
-        <!-- /Modal 3 -->
       </article>
 
     </div>
   </section>
-  </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Philip Ihle</p>
   </footer>
 
+  <!-- ============================== -->
+  <!-- FULLSKJERMS-MODALER (som på index)
+       NB: Ligger UTENFOR .project-grid -->
+  <!-- ============================== -->
+
+  <!-- Modal 1 -->
+  <div id="modal1" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')" aria-label="Lukk">&times;</span>
+      <h3>Skoleprosjekt – Rekonstruksjon av OsloMet's nettsider</h3>
+      <p>
+        Første semester i studiet rekonstruerte jeg og min eksamensgruppe, OsloMet sin nettside for
+        emnet matematisk modellering. Dette ga oss nyttig kunnskap og erfaring innenfor HTML, CSS og
+        JavaScript. Vi vektet også universell utforming stort, og brukte sematisk HTML og CSS for best
+        mulig utforming.
+      </p>
+      <br />
+      <p>
+        Se koden på
+        <a href="https://github.com/philipihle/OsloMet-Rekonstruksjon"
+           class="btn btn-github" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+      <img src="oslometside.png" alt="OsloMet's nettside rekonstruert" class="oslometside" />
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="modal2" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')" aria-label="Lukk">&times;</span>
+      <h3>ASKO – RPA Robot</h3>
+      <p>
+        Effektiviserte manuelle prossesser gjennom automatisjon ved hjelp av
+        RPA basert på JavaScript og UI automatisering.
+      </p>
+      <img src="asko-thumb2.png" alt="ASKO – NGFLYT" class="asko-thumb" />
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="modal3" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')" aria-label="Lukk">&times;</span>
+      <h3>KIWI · Markedsmateriell</h3>
+      <p>
+        Jeg lagde markedsmateriell til lokal markedsføring i butikk av KIWI Pluss og Trumf. Materiellet ble hengt opp på KIWI Fjellbo for å verve flere kunder til fordelsprogrammene, og materiellet ble laget ved hjelp av Photoshop
+      </p>
+      <img src="kiwiplussrek2.jpeg" alt="KIWI Markedsmateriell" class="kiwi-markedsmateriell-modal" />
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
 </body>
 </html>
-
