@@ -512,3 +512,28 @@ body.home nav h1::after {
   background: var(--primary);
   border-radius: 2px;
 }
+.om-meg-content {
+  display: flex;              /* bilde + tekst side om side */
+  align-items: flex-start;    /* start på samme linje */
+  gap: 2rem;                  /* luft mellom bilde og tekst */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.om-meg-pb {
+  width: 280px;               /* juster størrelsen */
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.om-meg-content h2,
+.om-meg-content p {
+  margin-bottom: 1rem;        /* spacing mellom tekstlinjer */
+}
+
+.om-meg-content h2 {
+  color: var(--white);
+}
+.om-meg-tekst {
+font-size: 1.1rem;
+}
