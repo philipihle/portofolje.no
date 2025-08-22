@@ -21,7 +21,11 @@
     background-color: var(--dark-bg);
     color: var(--text-light);
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
   }
+
+  
   
   /* ========================
      HEADER OG NAVIGASJON
@@ -272,6 +276,7 @@
     padding: 2rem;
     background: #0a0d1a;
     color: var(--text-light);
+    margin-top: auto;
   }
   
   /* ========================
