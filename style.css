@@ -519,6 +519,7 @@ body.home nav h1::after {
   max-width: 1100px;
   margin: 0 auto;
   padding: 2rem;
+  margin-top: 6rem;
 }
 .om-meg-pb {
   width: 280px;               /* juster størrelsen */
