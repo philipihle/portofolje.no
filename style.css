@@ -1,236 +1,210 @@
-/* ================================
-   Modern Porteføljestil (Dark UI)
-   ================================ */
+:root {
+  --dark-bg: #0f111a;
+  --card-bg: #1a1d2b;
+  --primary: #fdbb30;
+  --text-light: #c7c7c7;
+  --white: #ffffff;
+  --transition: 0.3s ease-in-out;
+  --radius: 12px;
+}
 
-   :root {
-    --dark-bg: #0f111a;
-    --card-bg: #1a1d2b;
-    --primary: #fdbb30;
-    --text-light: #c7c7c7;
-    --white: #ffffff;
-    --transition: 0.3s ease-in-out;
-    --radius: 12px;
-  }
-  
-  /* RESET */
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  
-  html, body { height: 100%; }
-  body {
-    font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
-    background-color: var(--dark-bg);
-    color: var(--text-light);
-    line-height: 1.6;
-  }
-  
-  /* ========================
-     HEADER OG NAVIGASJON
-     ======================== */
-  header {
-    background: #0a0d1a;
-    color: var(--white);
-    padding: 1.25rem 2rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-  }
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  nav h1 {
-    color: var(--primary);
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-  }
-  nav ul { list-style: none; display: flex; gap: 2rem; }
-  nav a {
-    color: var(--text-light);
-    text-decoration: none;
-    font-weight: 500;
-    transition: var(--transition);
-  }
-  nav a:hover { color: var(--primary); }
-  
-  /* ========================
-     KNAPPER (globale)
-     ======================== */
-  .btn {
-    display: inline-block;
-    padding: 0.25rem 0.25rem;
-    background: var(--primary);
-    color: #111;
-    border: 0;
-    border-radius: 8px;
-    font-weight: 700;
-    text-decoration: none;         /* viktig for <a class="btn"> */
-    cursor: pointer;
-    transition: transform .15s ease, background .2s ease, box-shadow .2s;
-    box-shadow: 0 6px 14px rgba(0,0,0,.2);
-    margin-top: 0.7rem;
-  }
-  .btn:hover { background: #e6a816; transform: translateY(-1px); }
-  .btn:active { transform: translateY(0); box-shadow: 0 4px 10px rgba(0,0,0,.25); }
-  
-  /* Flat “ghost”-knapp til kortene */
-  .btn-ghost {
-    display: inline-block;
-    padding: .55rem 1rem;
-    border: 1px solid rgba(255,255,255,.18);
-    color: #dfe6f0;
-    background: transparent;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background .2s ease, border-color .2s ease, color .2s ease;
-  }
-  .btn-ghost:hover {
-    background: rgba(255,255,255,.06);
-    border-color: rgba(255,255,255,.35);
-    color: #fff;
-  }
-  
-  /* ========================
-     HERO-SEKSJON
-     ======================== */
-  .hero {
-    text-align: center;
-    padding: 6rem 2rem 4rem;
-    background-color: var(--card-bg);
-    background-image: url('binary-bg.png');  /* legg inn din fil */
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: soft-light;
-    position: relative;
-  }
-  .hero h2 {
-    font-size: clamp(2.2rem, 3.8vw, 3rem);
-    color: var(--white);
-    margin-bottom: 1rem;
-  }
-  .undertekst-font { font-style: italic; color: #b9c0cc; margin-top: .75rem; }
-  
-  .profilbilde {
-    display: block;
-    margin: 2rem auto 1.25rem;
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: 50% 18%;  /* flytt fokus litt opp – juster ved behov */
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
-  }
-  
-  /* ========================
-     SEKSJONER GENERELT
-     ======================== */
-  .projects, .about, .contact {
-    padding: 3.5rem 0 4rem;
-  }
-  section > h2 {
-    max-width: 1100px;
-    margin: 0 auto 1.25rem;
-    padding: 0 2rem;
-    color: var(--white);
-    font-size: 2rem;
-  }
-  
-  /* ========================
-     PROSJEKTER – referansestil
-     ======================== */
-  .section-header {
-    max-width: 1100px;
-    margin: 0 auto 1.25rem;
-    padding: 0 2rem;
-  }
-  .section-header .eyebrow{
-    display:inline-block;
-    font-size:.8rem; letter-spacing:.12em; text-transform:uppercase;
-    color: var(--text-light); opacity:.7; margin-bottom:.25rem;
-  }
-  .section-header h2 { color:#fff; font-size:2.25rem; }
-  
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+main { flex: 1 0 auto; }
+
+header {
+  background: #0a0d1a;
+  color: var(--white);
+  padding: 1.25rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+nav h1 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+nav ul { list-style: none; display: flex; gap: 2rem; }
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+nav a:hover { color: var(--primary); }
+
+.btn {
+  display: inline-block;
+  padding: 0.25rem 0.25rem;
+  background: var(--primary);
+  color: #111;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .15s ease, background .2s ease, box-shadow .2s;
+  box-shadow: 0 6px 14px rgba(0,0,0,.2);
+  margin-top: 0.7rem;
+}
+.btn:hover { background: #e6a816; transform: translateY(-1px); }
+.btn:active { transform: translateY(0); box-shadow: 0 4px 10px rgba(0,0,0,.25); }
+
+.btn-ghost {
+  display: inline-block;
+  padding: .55rem 1rem;
+  border: 1px solid rgba(255,255,255,.18);
+  color: #dfe6f0;
+  background: transparent;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+.btn-ghost:hover {
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.35);
+  color: #fff;
+}
+
+.hero {
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  background-color: var(--card-bg);
+  background-image: url('binary-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: soft-light;
+  position: relative;
+}
+.hero h2 {
+  font-size: clamp(2.2rem, 3.8vw, 3rem);
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.undertekst-font { font-style: italic; color: #b9c0cc; margin-top: .75rem; }
+
+.profilbilde {
+  display: block;
+  margin: 2rem auto 1.25rem;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 18%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.projects, .about, .contact { padding: 3.5rem 0 4rem; }
+section > h2 {
+  max-width: 1100px;
+  margin: 0 auto 1.25rem;
+  padding: 0 2rem;
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.section-header {
+  max-width: 1100px;
+  margin: 0 auto 1.25rem;
+  padding: 0 2rem;
+}
+.section-header .eyebrow{
+  display:inline-block;
+  font-size:.8rem; letter-spacing:.12em; text-transform:uppercase;
+  color: var(--text-light); opacity:.7; margin-bottom:.25rem;
+}
+.section-header h2 { color:#fff; font-size:2.25rem; }
+
 .project-grid {
-  max-width: 1100px;                 /* samme bredde som på index */
+  max-width: 1100px;
   margin: 1.5rem auto 0;
   padding: 0 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.75rem;
 }
-
 @media (max-width: 900px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 på medium skjermer */
-  }
+  .project-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .project-grid { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 600px) {
-  .project-grid {
-    grid-template-columns: 1fr; /* 1 på mobil */
-  }
+.project-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.06);
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
-  
-  .project-card {
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,.06);
-    box-shadow: 0 8px 24px rgba(0,0,0,.25);
-    display: flex;
-    flex-direction: column;
-    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-  }
-  .project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 36px rgba(0,0,0,.35);
-    border-color: rgba(255,255,255,.12);
-  }
-  
-  .thumb-wrap {
-    position: relative;
-    aspect-ratio: 16/9;             /* konsistent høyde, uansett bilde */
-    background: #101320;
-  }
-  .project-thumb {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .badge {
-    position: absolute;
-    left: 14px;
-    top: 14px;
-    background: var(--primary);
-    color: #111;
-    font-weight: 700;
-    font-size: .75rem;
-    padding: .35rem .6rem;
-    border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0,0,0,.25);
-  }
-  
-  .card-body { padding: 1rem 1.25rem .5rem; }
-  .card-title { color: #fff; font-size: 1.15rem; margin: 0 0 .35rem; }
-  .card-desc  { color: var(--text-light); opacity: .9; font-size: .95rem; }
-  .card-footer { padding: 0 1.25rem 1.25rem; margin-top: .25rem; }
-  
-  /* ========================
-     MODALER
-     ======================== */
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0,0,0,.35);
+  border-color: rgba(255,255,255,.12);
+}
+
+.thumb-wrap {
+  position: relative;
+  aspect-ratio: 16/9;
+  background: #101320;
+}
+.project-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.badge {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  background: var(--primary);
+  color: #111;
+  font-weight: 700;
+  font-size: .75rem;
+  padding: .35rem .6rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.25);
+}
+
+.card-body { padding: 1rem 1.25rem .5rem; }
+.card-title { color: #fff; font-size: 1.15rem; margin: 0 0 .35rem; }
+.card-desc  { color: var(--text-light); opacity: .9; font-size: .95rem; }
+.card-footer { padding: 0 1.25rem 1.25rem; margin-top: .25rem; }
+
 .modal {
-  display: none;                 /* skjult som default */
-  position: fixed;               /* dekker hele vinduet */
+  display: none;
+  position: fixed;
   z-index: 1000;
-  inset: 0;                      /* top, right, bottom, left = 0 */
+  inset: 0;
   background-color: rgba(0,0,0,0.6);
 }
-/* Viktig: Ikke nest .modal inne i et element som får transform,
-   ellers blir "fixed" forankret til den boksen (det var feilen). */
-
+/* Kritisk: Ikke nest .modal inne i et element som får transform,
+   ellers blir "fixed" forankret til den boksen */
 .modal-open { overflow: hidden; height: 100vh; }
 
 .modal-content {
@@ -244,7 +218,6 @@
   overflow-y: auto;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
-
 .close {
   position: sticky;
   top: 0;
@@ -253,37 +226,32 @@
   cursor: pointer;
   color: var(--white);
 }
-  
-  /* Bilder inne i modal */
-  .oslometside,
-  .modal-content img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-    margin-top: 1rem;
-  }
-  
-  /* ========================
-     FOOTER
-     ======================== */
-  footer {
-    text-align: center;
-    padding: 2rem;
-    background: #0a0d1a;
-    color: var(--text-light);
-  }
-  
-  /* ========================
-     RESPONSIVE
-     ======================== */
-  @media (max-width: 768px) {
-    nav ul { gap: 1rem; }
-    .hero { padding: 4.5rem 1.25rem 3rem; }
-    .profilbilde { width: 12rem; height: 12rem; }
-    .section-header, section > h2 { padding: 0 1.25rem; }
-    .project-grid { padding: 0 1.25rem; }
-  }
+.oslometside,
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin-top: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #0a0d1a;
+  color: var(--text-light);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  nav ul { gap: 1rem; }
+  .hero { padding: 4.5rem 1.25rem 3rem; }
+  .profilbilde { width: 12rem; height: 12rem; }
+  .section-header, section > h2 { padding: 0 1.25rem; }
+  .project-grid { padding: 0 1.25rem; }
+}
+
 .avatar {
   position: relative;
   width: 15rem;
@@ -291,7 +259,6 @@
   margin-bottom: 2.5rem;
   display: inline-block;
 }
-
 .profilbilde {
   width: 100%;
   height: 100%;
@@ -305,8 +272,6 @@
     floatBreath 7s ease-in-out 1.1s infinite;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
-
-/* Sweep-ring (vises bare under animasjonen) */
 .avatar::before {
   content: "";
   position: absolute;
@@ -319,7 +284,7 @@
   animation: ringSweep 900ms cubic-bezier(.2, .8, .2, 1) 150ms forwards;
   pointer-events: none;
 }
-/* --- Animasjoner --- */
+
 @keyframes irisReveal {
   0% {
     clip-path: circle(0% at 50% 50%);
@@ -340,7 +305,6 @@
     opacity: 1;
   }
 }
-
 @keyframes ringSweep {
   0% { opacity: 0; transform: rotate(0turn); }
   20% { opacity: 1; }
@@ -348,9 +312,6 @@
   100% { opacity: 0; transform: rotate(1turn); }
 }
 
-
-
-/* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .home .profilbilde {
     animation: none !important;
@@ -359,65 +320,40 @@
   }
 }
 
-  .dark-section {
-    background-color: var(--card-bg); /* samme som header */
-    color: var(--text-light);
-    padding: 4rem 2rem;
-  }
-  
-  .section-container {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  
-  .dark-section h2 {
-    color: var(--white);
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-  
-  .dark-section p {
-    margin-bottom: 0.75rem;
-  }
-  
-  .dark-section a {
-    color: var(--primary);
-    text-decoration: none;
-  }
-  
-  .dark-section a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Litt luft før footeren */
-  footer {
-    background-color: #0a0d1a;
-    border-top: 1px solid rgba(255,255,255,0.08);
-  }
-  /* ========================
-   Kontakt-side (HTML: <main class="content"> + <ul class="contact-info">)
-   ======================== */
+.dark-section {
+  background-color: var(--card-bg);
+  color: var(--text-light);
+  padding: 4rem 2rem;
+}
+.section-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.dark-section h2 {
+  color: var(--white);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.dark-section p { margin-bottom: 0.75rem; }
+.dark-section a { color: var(--primary); text-decoration: none; }
+.dark-section a:hover { text-decoration: underline; }
 
-/* tittel/intro og ramme rundt innholdet */
 .content {
   max-width: 900px;
   margin: 0 auto;
-  padding: 4.5rem 2rem 5.5rem;       /* litt ekstra luft mot footer */
+  padding: 4.5rem 2rem 5.5rem;
 }
-
 .content h2 {
   color: var(--white);
   font-size: 2rem;
   margin-bottom: .5rem;
 }
-
 .content > p {
   color: var(--text-light);
   opacity: .95;
   margin-bottom: 1rem;
 }
 
-/* selve kontaktlisten */
 .contact-info {
   list-style: none;
   padding: 0;
@@ -426,10 +362,9 @@
   flex-direction: column;
   gap: .75rem;
 }
-
 .contact-info li {
   display: grid;
-  grid-template-columns: 120px 1fr;  /* Etikett | Verdi  */
+  grid-template-columns: 120px 1fr;
   align-items: center;
   gap: .75rem;
   padding: .9rem 1rem;
@@ -437,15 +372,11 @@
   border: 1px solid rgba(255,255,255,.08);
   border-radius: 10px;
 }
-
-/* Etikettene (E‑post, LinkedIn, Sted) */
 .contact-info li strong {
   color: #eef2f7;
   font-weight: 700;
   letter-spacing: .2px;
 }
-
-/* Lenker */
 .contact-info a {
   color: var(--primary);
   text-decoration: none;
@@ -457,13 +388,10 @@
   outline-offset: 2px;
   border-radius: 6px;
 }
-
-/* Små ikoner foran etikettene (frivillig – lett å fjerne) */
 .contact-info li:nth-child(1) strong::before { content: "✉️ "; }
 .contact-info li:nth-child(2) strong::before { content: "🔗 "; }
 .contact-info li:nth-child(3) strong::before { content: "📍 "; }
 
-/* Mobil: legg etiketten over verdien */
 @media (max-width: 640px) {
   .contact-info li {
     grid-template-columns: 1fr;
@@ -472,7 +400,6 @@
   }
 }
 
-/* Aktiv nav‑lenke (du har class="active" på Kontakt) */
 nav a.active {
   color: var(--primary);
   position: relative;
@@ -487,26 +414,20 @@ nav a.active::after {
   border-radius: 2px;
 }
 
-/* Gjør logo-lenken i header lik den gamle stylinga */
 nav h1 a { color: var(--primary); text-decoration: none; }
 nav h1 a:hover { opacity: .9; }
-/* Gul strek under navnet i header når vi er på forsiden */
-body.home nav h1 {
-  position: relative;
-}
 
+body.home nav h1 { position: relative; }
 body.home nav h1::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -6px;
+  left: 0; right: 0; bottom: -6px;
   margin: 0 auto;
-  width: 24px;
-  height: 2px;
+  width: 24px; height: 2px;
   background: var(--primary);
   border-radius: 2px;
 }
+
 .om-meg-content {
   display: grid;
   grid-template-columns: minmax(260px, 420px) 1fr;
@@ -516,9 +437,7 @@ body.home nav h1::after {
   margin: 6rem auto 0;
   padding: 2rem;
 }
-
 .om-meg-content > * { min-width: 0; }
-
 .om-meg-pb {
   width: 100%;
   height: 100%;
@@ -527,13 +446,11 @@ body.home nav h1::after {
   border-radius: 12px;
   display: block;
 }
-
 .om-meg-tekst {
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
 }
-
 @media (max-width: 900px) {
   .om-meg-content { grid-template-columns: 1fr; }
   .om-meg-pb {
