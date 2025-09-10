@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prosjekter | Philip Ihle</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "05c69e7d32c5470a9f07d1f9a2ef43d6"}'></script><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "05c69e7d32c5470a9f07d1f9a2ef43d6"}'></script>
+</head>
+<body>
+
+  <!-- Header / Navigasjon -->
+  <header>
+    <nav>
+      <h1><a href="/">Philip Ihle</a></h1>
+      <ul>
+        <li><a href="/Prosjekter/" class="active">Prosjekter</a></li>
+        <li><a href="/Om/">Om meg</a></li>
+        <li><a href="/Kontakt/">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Prosjekter -->
+  <section id="prosjekter" class="projects">
+    <div class="section-header">
+      <span class="eyebrow">Mitt arbeid</span>
+      <h2>Prosjekter</h2>
+    </div>
+
+    <div class="project-grid">
+
+      <!-- Kort 1 -->
+      <article class="project-card">
+        <div class="thumb-wrap">
+          <img src="oslometside.png" alt="Skoleprosjekt" class="project-thumb" />
+          <span class="badge">Skoleprosjekt</span>
+        </div>
+
+        <div class="card-body">
+          <h3 class="card-title">Rekonstruksjon av OsloMet sin emneside</h3>
+          <p class="card-desc">Koding i HTML, CSS og JavaScript fra scratch.</p>
+        </div>
+
+        <div class="card-footer">
+          <button class="btn btn-ghost" onclick="openModal('modal1')">Les mer</button>
+        </div>
+      </article>
+
+      <!-- Kort 2 -->
+      <article class="project-card">
+        <div class="thumb-wrap">
+          <img src="asko-thumb2.png" alt="ASKO – NGFLYT" class="project-thumb" />
+          <span class="badge">Jobb · ASKO</span>
+        </div>
+
+        <div class="card-body">
+          <h3 class="card-title">PA Robot</h3>
+          <p class="card-desc">
+            Effektiviserte manuelle prossesser gjennom automatisjon ved hjelp av
+            MS PA, JavaScript og UI automatisering.
+          </p>
+        </div>
+
+        <div class="card-footer">
+          <button class="btn btn-ghost" onclick="openModal('modal2')">Les mer</button>
+        </div>
+      </article>
+
+      <!-- Kort 3 -->
+      <article class="project-card">
+        <div class="thumb-wrap">
+          <img src="kiwiplussrek2.jpeg" alt="KIWI Reklame" class="project-thumb" />
+          <span class="badge">Prosjekt · KIWI</span>
+        </div>
+
+        <div class="card-body">
+          <h3 class="card-title">Markedsmateriell</h3>
+          <p class="card-desc">
+            Markedsmateriell for KIWI Pluss og Trumf, utarbeidet i Photoshop.
+          </p>
+        </div>
+
+        <div class="card-footer">
+          <button class="btn btn-ghost" onclick="openModal('modal3')">Les mer</button>
+        </div>
+      </article>
+
+            <!-- Kort 4 -->
+      <article class="project-card">
+        <div class="thumb-wrap">
+          <img src="unginnsikt.jpg" alt="UNG Innsikt" class="project-thumb" />
+          <span class="badge">UNG Innsikt · NorgesGruppen</span>
+        </div>
+
+        <div class="card-body">
+          <h3 class="card-title">UNG Innsikt</h3>
+          <p class="card-desc">
+            Forsknings- og analyseprosjekt for NorgesGruppen.
+          </p>
+        </div>
+
+        <div class="card-footer">
+          <button class="btn btn-ghost" onclick="openModal('modal4')">Les mer</button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Philip Ihle</p>
+  </footer>
+
+  <!-- ============================== -->
+  <!-- FULLSKJERMS-MODALER (som på index)
+       NB: Ligger UTENFOR .project-grid -->
+  <!-- ============================== -->
+
+  <!-- Modal 1 -->
+  <div id="modal1" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')" aria-label="Lukk">&times;</span>
+      <h3>Skoleprosjekt – Rekonstruksjon av OsloMet's nettsider</h3>
+      <p>
+        Første semester i studiet rekonstruerte jeg og min eksamensgruppe, OsloMet sin nettside for
+        emnet matematisk modellering. Dette ga oss nyttig kunnskap og erfaring innenfor HTML, CSS og
+        JavaScript. Vi vektet også universell utforming stort, og brukte sematisk HTML og CSS for best
+        mulig utforming.
+      </p>
+      <br />
+      <p>
+        Se koden på
+        <a href="https://github.com/philipihle/OsloMet-Rekonstruksjon"
+           class="btn btn-github" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+      <img src="oslometside.png" alt="OsloMet's nettside rekonstruert" class="oslometside" />
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="modal2" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')" aria-label="Lukk">&times;</span>
+      <h3>ASKO – RPA Robot</h3>
+      <p>
+        Effektiviserte manuelle prossesser gjennom automatisjon ved hjelp av
+        RPA basert på JavaScript og UI automatisering.
+      </p>
+      <img src="asko-thumb2.png" alt="ASKO – NGFLYT" class="asko-thumb" />
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="modal3" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')" aria-label="Lukk">&times;</span>
+      <h3>KIWI · Markedsmateriell</h3>
+      <p>
+        Jeg lagde markedsmateriell til lokal markedsføring i butikk av KIWI Pluss og Trumf. Materiellet ble hengt opp på KIWI Fjellbo for å verve flere kunder til fordelsprogrammene, og materiellet ble laget ved hjelp av Photoshop
+      </p>
+      <img src="kiwiplussrek2.jpeg" alt="KIWI Markedsmateriell" class="kiwi-markedsmateriell-modal" />
+    </div>
+  </div>
+
+    <!-- Modal 4 -->
+  <div id="modal4" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal4')" aria-label="Lukk">&times;</span>
+      <h3>Mer · Her</h3>
+      <p>
+        Skriv her.
+      </p>
+      <img src="unginnsikt.jpg" alt="UNG Innsikt" class="ung-innsikt-modal" />
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+</html>
